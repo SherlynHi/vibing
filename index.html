@@ -8,35 +8,53 @@
     body {
       margin: 0;
       font-family: "Segoe UI", sans-serif;
-      background-color: #f4f4f4;
+      background: linear-gradient(to bottom, #fff8f8, #f4f4f4);
       color: #333;
+      overflow-x: hidden;
     }
     header {
       background-color: #C1003E;
       color: white;
       padding: 2rem;
       text-align: center;
+      position: relative;
+      overflow: hidden;
     }
     header h1 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       margin: 0;
     }
     header p {
-      font-size: 1.25rem;
+      font-size: 1.3rem;
       margin-top: 0.5rem;
     }
+    header img {
+      width: 100%;
+      max-height: 360px;
+      object-fit: contain;
+      margin-top: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      display: block;
+    }
     main {
-      max-width: 800px;
+      max-width: 900px;
       margin: 2rem auto;
       padding: 0 1rem;
     }
     .section {
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
     }
     .section h2 {
       color: #660033;
       border-left: 4px solid #C1003E;
       padding-left: 0.5rem;
+      display: flex;
+      align-items: center;
+    }
+    .section h2::before {
+      content: "🌿 ";
+      margin-right: 0.5rem;
     }
     .cta {
       background-color: #C1003E;
@@ -46,11 +64,12 @@
       font-size: 1.2rem;
       border-radius: 8px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease, transform 0.2s ease;
       margin-top: 1rem;
     }
     .cta:hover {
       background-color: #a30034;
+      transform: scale(1.05);
     }
     .footer {
       text-align: center;
@@ -59,35 +78,56 @@
       margin-top: 2rem;
       padding-bottom: 1rem;
     }
+    .leaf {
+      position: absolute;
+      top: -50px;
+      width: 30px;
+      height: 30px;
+      background-image: url('https://cdn-icons-png.flaticon.com/512/415/415733.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      animation: fall linear infinite;
+      opacity: 0.7;
+    }
+    @keyframes fall {
+      0% { transform: translateY(0) rotate(0deg); }
+      100% { transform: translateY(100vh) rotate(360deg); }
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>Gratitude Harvest</h1>
     <p>🌱 Plant the Praise. Watch Us Grow.</p>
+    <img src="https://cdn.pixabay.com/photo/2020/04/23/13/39/tree-5088753_1280.jpg" alt="Single Tree Illustration" />
+    <div class="leaf" style="left: 10%; animation-duration: 12s;"></div>
+    <div class="leaf" style="left: 30%; animation-duration: 9s;"></div>
+    <div class="leaf" style="left: 50%; animation-duration: 11s;"></div>
+    <div class="leaf" style="left: 70%; animation-duration: 13s;"></div>
+    <div class="leaf" style="left: 90%; animation-duration: 10s;"></div>
   </header>
 
   <main>
     <section class="section">
-      <h2>What Is Gratitude Harvest?</h2>
+      <h2>Welcome to the Team!</h2>
       <p>
-        Gratitude Harvest is our new, peer-nominated recognition program that celebrates everyday acts of collaboration, kindness, and values-based contribution. Through digital submissions and a physical Gratitude Tree, we make recognition real and visible.
+        👋 If you're new here—welcome aboard! Gratitude Harvest is one of the ways we celebrate each other and build a connected, values-driven culture. It's more than a program—it's a chance to feel seen, supported, and part of something meaningful from day one.
       </p>
     </section>
 
     <section class="section">
       <h2>How It Works</h2>
       <ul>
-        <li>Nominate any colleague using our online form.</li>
-        <li>Your nomination becomes a “leaf” on our Gratitude Tree.</li>
-        <li>Every 4 months, we celebrate “Harvest Heroes” who receive meaningful tokens of appreciation.</li>
+        <li>📩 Nominate any colleague using our online form—yes, even as a newcomer, your voice matters.</li>
+        <li>🍃 Your nomination becomes a “leaf” on our Gratitude Tree in the lobby.</li>
+        <li>🎉 Every 4 months, we celebrate “Harvest Heroes” who receive meaningful, thoughtful tokens.</li>
       </ul>
     </section>
 
     <section class="section">
       <h2>Why It Matters</h2>
       <p>
-        Recognition builds connection. When we celebrate each other’s efforts, we grow stronger as a team—and live our values more deeply. Let’s create a culture where appreciation takes root.
+        💡 Starting a new role can feel overwhelming—this initiative ensures you’ll see (and be seen) for the everyday ways people help each other. It’s a great way to get to know your teammates, show appreciation, and feel part of the bigger picture.
       </p>
     </section>
 
@@ -101,4 +141,3 @@
   </div>
 </body>
 </html>
-
